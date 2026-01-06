@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <nav>
-    <h1>Prajwol</h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">☰</label>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="project.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="videoDemo.html">Video</a></li>
-      <li><a href="sitereport.html">Site Report</a></li>
-    </ul>
-  </nav>
+    <h1>My Portfolio</h1>
 </header>
 
-<main>
-  <section class="card">
+<input type="checkbox" id="menu-toggle" class="menu-toggle"> 
+<label for="menu-toggle" class="menu-toggle-label">&#9776; Menu</label>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="videoDemo.html">Video Demo</a>
+    <a href="sitereport.html">Site Report</a>
+</nav>
+
+<div class="container">
     <h2>Contact Me</h2>
-    <form action="mailto:your@email.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
+
+    <form class="contact-form" action="mailto:abc@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
     </form>
-  </section>
-</main>
+</div>
 
 <footer>
-  <p>CSY 1063
-  </p>
+    &copy; 2026 ABC
 </footer>
 
 </body>
