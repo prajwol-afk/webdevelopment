@@ -1,0 +1,260 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page layout */
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header */
+header {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  background-color: #3cb371;
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+}
+.menu-toggle-label {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 700px) {
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+  .menu-toggle:checked ~ nav {
+    display: flex;
+  }
+  .menu-toggle-label {
+    display: block;
+    background-color: #3cb371;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Main content */
+.container {
+  flex: 1;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Profile image */
+.profile-pic {
+  display: block;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2e8b57;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Project page */
+.project-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.project-item img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.project-item img:hover {
+  transform: scale(1.05);
+}
+.project-item p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* Responsive adjustments for projects */
+@media (max-width: 900px) {
+  .project-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3cb371;
+}
+
+/* Video Demo Page */
+
+.video-heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* site report */
+.card {
+  flex: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.validation-item img,
+.validation-css img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #2e8b57;
+  margin-bottom: 15px;
+}
+
+.validation-item p,
+.validation-css p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.video-demo-heading {
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.video-buttons {
+  margin: 10px 0;
+}
+
+.video-buttons .btn {
+  display: inline-block;
+  background-color: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.video-buttons .btn:hover {
+  background-color: #3cb371;
+}
+
+/* Footer */
+footer {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
